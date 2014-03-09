@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <project name="lab5" default="all" >
+  <property name="src" value="src"/>
+  <property name="bin" value="bin"/>
+  <property name="doc" value="doc"/>
+  <property name="dist" value="dist"/>
+  <property name="dist.jar" value="${dist}/lab5.jar"/>
+  <target name="mkdirs" description="Создаем каталоги">
+    <mkdir dir="${bin}"/>
+    <mkdir dir="${doc}"/>
+    <mkdir dir="${dist}"/>
+  </target>
+  <target name="compile" description="Компиляция проекта" depends="clean,mkdirs">
+    <echo>Компилируем...</echo>
+    <javac destdir="${bin}" includeantruntime="false">
+      <src path="${src}"/>
+    </javac>
+   </target>
+  <target name="all" description="Очистить и построить проект" depends="compile">
+    <echo>Сборка проекта...</echo>
+    <javadoc sourcepath="src" destdir="doc" />
+    <jar destfile="${dist.jar}" basedir="${bin}">
+      <manifest>
+	<attribute name="Main-Class" value="ru.gorbacev.lab5_stp.Lab5_stp"/>
+      </manifest>
+    </jar>
+  </target>
+  <target name="clean" description="Очистка">
+    <echo>Удаление каталогов</echo>
+    <delete dir="${bin}"/>
+    <delete dir="${doc}"/>
+    <delete dir="${dist}"/>
+    <delete dir="${test.bin}"/>
+  </target>
+</project>
