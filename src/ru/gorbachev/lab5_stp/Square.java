@@ -40,7 +40,7 @@ public class Square extends Polygon{
 
    @Override
     void v() {
-        System.out.println("id= "+this.getId()+", "+this.getName()+",Сторона а:"+a+", Радиус окружности: "+Math.ceil(this.getRadius()*100)/100+", Диагональ: "+Math.ceil(this.getDiagonal()*100)/100 +", Периметр: "+Math.ceil(perimetr*100)/100+", Плошадь: "+Math.ceil(square*100)/100);
+        System.out.println(getTime() + "; "+"id= "+this.getId()+", "+this.getName()+",Сторона а:"+a+", Радиус окружности: "+Math.ceil(this.getRadius()*100)/100+", Диагональ: "+Math.ceil(this.getDiagonal()*100)/100 +", Периметр: "+Math.ceil(perimetr*100)/100+", Плошадь: "+Math.ceil(square*100)/100);
     }
 
     

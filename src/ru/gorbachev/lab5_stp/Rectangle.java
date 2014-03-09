@@ -51,7 +51,7 @@ public class Rectangle extends Polygon{
    
     @Override
     void v() {
- System.out.println("id= "+this.getId()+",Сторона a:"+a+",Сторона b:"+b+", "+this.getName()+", Плошадь треугольника в периметре: "+Math.ceil(this.getArea1()*100)/100+", полудиагональ "+Math.ceil(this.getPolDiag()*100)/100  +", Периметр: "+Math.ceil(perimetr*100)/100 +", Плошадь: "+Math.ceil(square*100)/100);
+ System.out.println(getTime() + "; "+"id= "+this.getId()+",Сторона a:"+a+",Сторона b:"+b+", "+this.getName()+", Плошадь треугольника в периметре: "+Math.ceil(this.getArea1()*100)/100+", полудиагональ "+Math.ceil(this.getPolDiag()*100)/100  +", Периметр: "+Math.ceil(perimetr*100)/100 +", Плошадь: "+Math.ceil(square*100)/100);
     }
 
     

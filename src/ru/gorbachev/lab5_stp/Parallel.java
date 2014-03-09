@@ -36,6 +36,6 @@ public class Parallel extends Polygon {
    
     @Override
     void v() {
-        System.out.println("id= "+this.getId()+", Имя:"+this.getName()+",Сторона a:"+a+",Сторона b:"+b+",Угол в радианах: "+Math.ceil(this.getRadian()*100)/100+",Второй угол "+Math.ceil(180-y*100)/100+", Периметр: "+Math.ceil(perimetr*100)/100+", Площадь: "+Math.ceil(square*100)/100); 
+        System.out.println(getTime() + "; "+"id= "+this.getId()+", Имя:"+this.getName()+",Сторона a:"+a+",Сторона b:"+b+",Угол в радианах: "+Math.ceil(this.getRadian()*100)/100+",Второй угол "+Math.ceil(180-y*100)/100+", Периметр: "+Math.ceil(perimetr*100)/100+", Площадь: "+Math.ceil(square*100)/100); 
     }
 }

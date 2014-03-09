@@ -1,5 +1,8 @@
 package ru.gorbacev.lab5_stp;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public abstract class Polygon implements Perimetr,Squareable {
     public String name="Многоугольник"; 
@@ -14,6 +17,12 @@ public abstract class Polygon implements Perimetr,Squareable {
     
     abstract  void v();
 
+    public String getTime() 
+    {
+	DateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY HH:mm:ss");
+	Date date = new Date();
+        return dateFormat.format(date);
+    }
     
     public  int getId(){
         return id;
